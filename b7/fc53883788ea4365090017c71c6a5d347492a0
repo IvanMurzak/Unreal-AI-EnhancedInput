@@ -1,0 +1,20 @@
+UnrealAIEnhancedInput/Source/UnrealAIEnhancedInput/Private/UnrealAIEnhancedInputModule.cpp
+  s_e3cea916442b5e::t_8bb51887dddfd7 6-7,12-24,26,29-94,100-107,121-123,125-189,194-456,459-468
+  s_e3cea916442b5e::t_c51912a4f2b9b4 25
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.4",
+  "base_commit_sha": "b7fc53883788ea4365090017c71c6a5d347492a0",
+  "prompts": {},
+  "sessions": {
+    "s_e3cea916442b5e": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "c575ab56-73e6-4952-bb8b-fef415924e27",
+        "model": "claude-opus-4-8"
+      },
+      "human_author": "Ivan Murzak <Ivan.D.Murzak@gmail.com>"
+    }
+  }
+}
