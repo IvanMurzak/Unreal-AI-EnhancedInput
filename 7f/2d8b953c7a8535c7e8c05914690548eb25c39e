@@ -1,0 +1,37 @@
+Tests/e2e/tools/enhanced-input-action-create.e2e.ps1
+  s_e3cea916442b5e::t_fced8a4c14b79e 1-17
+Tests/e2e/tools/enhanced-input-add-mapping.e2e.ps1
+  s_e3cea916442b5e::t_3691cc0889b60d 1-18
+Tests/e2e/tools/enhanced-input-list.e2e.ps1
+  s_e3cea916442b5e::t_74d6e6cce92e46 1-17
+Tests/e2e/tools/enhanced-input-context-create.e2e.ps1
+  s_e3cea916442b5e::t_0b6bfd25d79a2b 1-17
+Tests/e2e/tools/enhanced-input-get.e2e.ps1
+  s_e3cea916442b5e::t_41506f2cb7972b 1-18
+extension.json
+  s_b9ea468cd2fef8::t_944712dba9cb60 10-16
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.4",
+  "base_commit_sha": "7f2d8b953c7a8535c7e8c05914690548eb25c39e",
+  "prompts": {},
+  "sessions": {
+    "s_b9ea468cd2fef8": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "agent-a51e4e7db27a0aa57",
+        "model": "unknown"
+      },
+      "human_author": "Ivan Murzak <Ivan.D.Murzak@gmail.com>"
+    },
+    "s_e3cea916442b5e": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "c575ab56-73e6-4952-bb8b-fef415924e27",
+        "model": "claude-opus-4-8"
+      },
+      "human_author": "Ivan Murzak <Ivan.D.Murzak@gmail.com>"
+    }
+  }
+}
