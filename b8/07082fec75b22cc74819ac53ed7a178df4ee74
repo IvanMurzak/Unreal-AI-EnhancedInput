@@ -1,0 +1,19 @@
+UnrealAIEnhancedInput/Source/UnrealAIEnhancedInput/UnrealAIEnhancedInput.Build.cs
+  s_f59a9ea9c1b04f::t_a01966eaf02d24 35-44,46-56
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.4",
+  "base_commit_sha": "b807082fec75b22cc74819ac53ed7a178df4ee74",
+  "prompts": {},
+  "sessions": {
+    "s_f59a9ea9c1b04f": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "b81206cc-eadd-429e-a3d6-9ca6043eace1",
+        "model": "claude-opus-4-8"
+      },
+      "human_author": "Ivan Murzak <Ivan.D.Murzak@gmail.com>"
+    }
+  }
+}
