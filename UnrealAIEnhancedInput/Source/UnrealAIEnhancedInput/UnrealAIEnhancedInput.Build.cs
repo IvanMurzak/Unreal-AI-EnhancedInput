@@ -32,14 +32,28 @@ public class UnrealAIEnhancedInput : ModuleRules
 			"UnrealMcpRuntime",
 			"UnrealMcpEditor",
 
-			// --- Your feature's engine modules (THE GATING) ---------------------------------------
-			// Uncomment + rename these to the engine plugin/module(s) your tools wrap. This dependency
-			// IS the "gating": the extension won't compile or load without the engine plugin it targets.
-			// `commands/init.ps1 -FeaturePlugin <Name>` wires the matching { "Name": "<Feature>" } entry
-			// into the .uplugin "Plugins" array; uncomment the lines below to take a real code dependency.
-			//   e.g. for Niagara: "Niagara", "NiagaraEditor"
+			// --- The gating engine module (THE GATING) --------------------------------------------
+			// This dependency IS the "gating": the extension won't compile or load without the engine
+			// plugin it targets. The Enhanced Input asset classes the tools author/inspect — UInputAction,
+			// UInputMappingContext, FEnhancedActionKeyMapping, EInputActionValueType — all live in the
+			// plugin's RUNTIME module `EnhancedInput`. NOTE: the EnhancedInput plugin's EDITOR module is
+			// named `InputEditor` (NOT `EnhancedInputEditor`, which does not exist); the asset-authoring
+			// tools here need none of it (they create/save via AssetTools / EditorScriptingUtilities /
+			// AssetRegistry), so only the runtime module is taken. `commands/init.ps1 -FeaturePlugin
+			// EnhancedInput` wired the matching { "Name": "EnhancedInput" } entry into the .uplugin
+			// "Plugins" array.
 			"EnhancedInput",
-			"EnhancedInputEditor",
+
+			// --- Support modules this extension's tools call ----------------------------------------
+			// InputCore: FKey + EKeys (resolve/validate a key name in enhanced-input-add-mapping).
+			// AssetRegistry: enumerate Input Action / Mapping Context assets (enhanced-input-list) +
+			//   FAssetRegistryModule::AssetCreated for the create tools.
+			// EditorScriptingUtilities: UEditorAssetLibrary (DoesAssetExist / LoadAsset / SaveLoadedAsset).
+			// UnrealEd: editor context the create/save path runs under.
+			"InputCore",
+			"AssetRegistry",
+			"EditorScriptingUtilities",
+			"UnrealEd",
 		});
 	}
 }
