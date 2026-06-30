@@ -1,0 +1,35 @@
+CLAUDE.md
+  s_e3cea916442b5e::t_bbd47c376d9495 1,3-8,10-11,13-30,34-37,39-48,53,58-59,62-66,70-71,76-77,82-83
+README.md
+  s_e3cea916442b5e::t_8befff4f8fdc03 1,4-7,12-16,18-20,22-23,25,27-33,35,38-48,51,53,55,57,60-61,64-65,67,69,71,75-76,82,87,90,92-94,96,98-101,104-107,111-112,117-118,121,131-134,136,138,141,143,146-150,160,164
+Tests/e2e/tools/hello-extension.e2e.ps1
+  s_e3cea916442b5e::t_e5387ad738cdb0 5
+UnrealAIEnhancedInput/Source/UnrealAIEnhancedInput/Private/Tests/UnrealAIEnhancedInputSpec.cpp
+  s_e3cea916442b5e::t_317aca2d9cedf5 1,18,24,30,37,46,48,50,56,61,66,70,81,86
+UnrealAIEnhancedInput/Source/UnrealAIEnhancedInput/Private/UnrealAIEnhancedInputModule.cpp
+  s_e3cea916442b5e::t_af64781516d080 1,10,20,23-24,37,39-40,49,65,70,72,81,86,89
+UnrealAIEnhancedInput/Source/UnrealAIEnhancedInput/UnrealAIEnhancedInput.Build.cs
+  s_e3cea916442b5e::t_c036f16977203c 1,6,8,41-42
+UnrealAIEnhancedInput/UnrealAIEnhancedInput.uplugin
+  s_e3cea916442b5e::t_f0825395deebfc 5,8-10,12,19,28-31
+docs/claude/architecture.md
+  s_e3cea916442b5e::t_9e8ede4210a4aa 31-34,44
+extension.json
+  s_e3cea916442b5e::t_d059b8a7ef6915 2-3,5-6,9
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.4",
+  "base_commit_sha": "c78241fa6e071b930ae83ed918df79acfd988287",
+  "prompts": {},
+  "sessions": {
+    "s_e3cea916442b5e": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "c575ab56-73e6-4952-bb8b-fef415924e27",
+        "model": "claude-opus-4-8"
+      },
+      "human_author": "Ivan Murzak <Ivan.D.Murzak@gmail.com>"
+    }
+  }
+}
