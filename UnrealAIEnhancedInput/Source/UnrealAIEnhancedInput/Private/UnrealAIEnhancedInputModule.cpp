@@ -442,7 +442,10 @@ public:
 					return FUnrealMcpToolResult::Error(FString::Printf(TEXT("'%s' is not a UInputAction."), *ActionPath));
 				}
 
-				const FKey ResolvedKey(FName(*KeyName));
+				// Use a named FName temporary (not `FKey ResolvedKey(FName(*KeyName))`) — the inline form
+				// is a most-vexing-parse: the compiler reads it as a function declaration, not a variable.
+				const FName KeyFName(*KeyName);
+				const FKey ResolvedKey(KeyFName);
 				if (!ResolvedKey.IsValid())
 				{
 					return FUnrealMcpToolResult::Error(FString::Printf(
