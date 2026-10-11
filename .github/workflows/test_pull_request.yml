@@ -91,8 +91,9 @@ jobs:
           $projectDir = Split-Path -Parent $env:HOST_UPROJECT
           # Launch the editor wired to a local MCP server in Custom mode (the supported "editor + bridge
           # + local server" bring-up). `open` spawns the editor and returns; wait-for-ready then blocks
-          # until tools/list is answerable. The host .uproject (UNREAL_HOST_PROJECT) must already have the
-          # UnrealMCP core plugin installed (its bridge built / server pinned) — set up once per runner.
+          # until tools/list is answerable. The host .uproject (UNREAL_HOST_PROJECT) is THIS repository's own
+          # host (bootstrapped by test_unreal_plugin.yml, never shared with another repo); its UnrealMCP core
+          # plugin must be installed (its bridge built / server pinned) — set up once per runner.
           # Use npx.cmd explicitly: Start-Process -FilePath does NOT apply PATHEXT, so a bare
           # "npx" resolves to the extension-less *nix shim and fails with
           # "%1 is not a valid Win32 application" on Windows.
