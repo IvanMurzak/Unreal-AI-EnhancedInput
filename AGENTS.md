@@ -1,18 +1,18 @@
 # Unreal-AI-EnhancedInput
 
 The **Unreal AI EnhancedInput** extension for AI Game Developer (Unreal-MCP): a C++ `Type=Editor` UE plugin
-(`UnrealAIEnhancedInput`) implementing `IUnrealMcpToolProvider` that contributes MCP tools wrapping the engine's built-in **Enhanced Input** plugin (authoring Input Actions / Mapping Contexts). Scaffolded
-from `IvanMurzak/Unreal-AI-Template` — it is now its own extension; do not edit it as the template.
+(`UnrealAIEnhancedInput`) implementing `IUnrealMcpToolProvider`; its MCP tools wrap the engine's built-in **Enhanced Input** plugin (authoring Input Actions / Mapping Contexts).
+Scaffolded from `IvanMurzak/Unreal-AI-Template`, but now its own extension — do not edit it as the template.
 
 **Gating:** the `EnhancedInput` engine plugin (`.Build.cs` module dep + `.uplugin` `Plugins[]` entry) — the extension won't compile or load without it.
 
 ## Layout
 
-- `UnrealAIEnhancedInput/` — the plugin (the only folder the release zip ships): `UnrealAIEnhancedInput.uplugin` + `Source/UnrealAIEnhancedInput/`
-  (`UnrealAIEnhancedInput.Build.cs`, `Private/UnrealAIEnhancedInputModule.cpp` = provider `FUnrealAIEnhancedInputProvider` + module, `Private/Tests/` = Automation specs).
-- `Tests/e2e/` — `Run-ToolChecks.ps1` harness + `tools/<tool-id>.e2e.ps1`, one check per tool.
+- `UnrealAIEnhancedInput/` — the plugin, the only folder the release zip ships: `UnrealAIEnhancedInput.uplugin` + `Source/UnrealAIEnhancedInput/`
+  (`UnrealAIEnhancedInput.Build.cs`; `Private/UnrealAIEnhancedInputModule.cpp` = provider `FUnrealAIEnhancedInputProvider` + module; `Private/Tests/` = Automation specs).
+- `Tests/e2e/` — `Run-ToolChecks.ps1` harness + `tools/<tool-id>.e2e.ps1` checks.
 - `commands/` — `bump-version`, `get-version`, `update-core`; `init` was the one-time scaffold (not rerun).
-- `extension.json` — install-catalog manifest (`version` mirrors the `.uplugin`; `minCoreVersion`, `enginePlugins`, `tools[]`).
+- `extension.json` — install-catalog manifest (`version`, `minCoreVersion`, `enginePlugins`, `tools[]`).
 - `.github/workflows/` — `test_pull_request.yml` (calls `test_unreal_plugin.yml` + E2E), version-gated `release.yml`, `bump_version.yml`.
 - `docs/claude/` — `architecture.md` (extension shape, contract), `ci.md` (workflows, repo variables,
   self-hosted runner gating), `release.md` (version gate, atomic source-zip release).
@@ -55,7 +55,7 @@ from `IvanMurzak/Unreal-AI-Template` — it is now its own extension; do not edi
 
 Junction `UnrealAIEnhancedInput/` into a UE project that has the `UnrealMCP` core plugin available (the workspace testbed
 `engines/unreal/test-project` already junctions `Plugins/UnrealMCP`), build the editor target with UBT, and
-run the Automation specs with filter `UnrealAIEnhancedInput` (`README.md` → "### 2. Build against a UE project (UBT)"). CI does the same on a
+run the Automation specs with filter `UnrealAIEnhancedInput` (`README.md` → step 2). CI does the same on a
 self-hosted Windows UE runner.
 
 ## Conventions
