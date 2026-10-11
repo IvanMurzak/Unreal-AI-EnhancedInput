@@ -56,7 +56,7 @@ Scaffolded from `IvanMurzak/Unreal-AI-Template`, but now its own extension — d
 Junction `UnrealAIEnhancedInput/` into a UE project that has the `UnrealMCP` core plugin available (the workspace testbed
 `engines/unreal/test-project` already junctions `Plugins/UnrealMCP`), build the editor target with UBT, and
 run the Automation specs with filter `UnrealAIEnhancedInput` (`README.md` → step 2). CI does the same on a
-self-hosted Windows UE runner.
+self-hosted Windows UE runner. E2E checks: read-only tools assert a well-formed success; mutating / required-input tools assert a defensive error.
 
 ## Conventions
 
