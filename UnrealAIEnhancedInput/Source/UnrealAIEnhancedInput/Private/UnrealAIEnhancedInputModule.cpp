@@ -29,7 +29,7 @@ DEFINE_LOG_CATEGORY_STATIC(LogUnrealAIEnhancedInput, Log, All);
 namespace
 {
 	// The module is unity-built (every .cpp concatenated into one TU), so file-local helpers must be
-	// MODULE-UNIQUE (the Unreal-MCP CLAUDE.md ODR rule) — prefix with the module name. These are shared
+	// MODULE-UNIQUE (the Unreal-MCP UnrealMCP/AGENTS.md ODR rule) — prefix with the module name. These are shared
 	// by the create handlers below (path splitting + write-root guard) and the read handlers (value-type
 	// stringification), mirroring the core UnrealMcpAssetTools idiom.
 
